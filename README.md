@@ -1,64 +1,49 @@
-# AI Based Venturi Tube Design and CFD Performance Prediction Using Machine Learning
+# AI-Based Venturi Tube Design and CFD Performance Prediction Using Machine Learning
 
-Predicting Venturi Tube CFD performance using Machine Learning models trained on ANSYS Fluent generated simulation data.
-
----
-
-## Overview
-
-This project explores the use of Machine Learning to predict the Computational Fluid Dynamics (CFD) performance of a Venturi tube without performing a new CFD simulation for every design.
-
-A dataset containing **149 CFD simulation cases** was generated using **ANSYS Fluent Design of Experiments (DOE)**. The generated data was then used to train multiple machine learning regression models capable of predicting important flow parameters directly from Venturi tube geometry.
-
-An additional inverse prediction model was also developed to recommend Venturi tube geometry based on desired CFD performance.
+> **Machine Learning framework for rapid prediction of Venturi tube CFD performance using ANSYS Fluent generated simulation data.**
 
 ---
 
-## Key Features
+## About the Project
 
-* Parametric Venturi tube design
-* CFD dataset generation using ANSYS Fluent
-* 149 Design of Experiments (DOE) simulation cases
-* Forward prediction (Geometry → CFD)
-* Inverse prediction (CFD → Geometry)
-* Multi-output regression models
-* Model performance comparison
+Computational Fluid Dynamics (CFD) simulations are widely used to analyze Venturi tube performance, but they require significant computational time. This project demonstrates how Machine Learning can be used to accurately predict CFD results from Venturi tube geometry, eliminating the need to run a new CFD simulation for every design iteration.
+
+A dataset of **149 CFD simulation cases** was generated using **ANSYS Fluent Design of Experiments (DOE)**. The generated dataset was used to train multiple machine learning regression models capable of predicting flow characteristics directly from geometric parameters.
+
+The project also includes an inverse prediction model that recommends Venturi tube geometry for desired CFD performance.
+
+---
+
+## Project Highlights
+
+* Parametric Venturi tube designed in ANSYS
+* CFD simulations performed using ANSYS Fluent
+* Dataset generated using Design of Experiments (DOE)
+* 149 simulation cases used for model training
+* Multi-output Machine Learning regression
+* Forward Prediction (Geometry → CFD Outputs)
+* Inverse Prediction (CFD Outputs → Geometry)
+* Performance comparison of multiple ML algorithms
 
 ---
 
 ## Technologies Used
 
-* ANSYS Workbench
-* ANSYS Fluent
-* Python
-* Jupyter Notebook
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit-learn
-* Joblib
-
----
-
-## Machine Learning Models
-
-The following regression algorithms were implemented and compared:
-
-* Random Forest Regressor
-* Extra Trees Regressor
-* Gradient Boosting Regressor
-
-Performance was evaluated using:
-
-* R² Score
-* Mean Absolute Error (MAE)
-* Root Mean Squared Error (RMSE)
+| Category            | Tools                         |
+| ------------------- | ----------------------------- |
+| CAD & Simulation    | ANSYS Workbench, ANSYS Fluent |
+| Programming         | Python                        |
+| Development         | Jupyter Notebook              |
+| Data Processing     | Pandas, NumPy                 |
+| Machine Learning    | Scikit-Learn                  |
+| Visualization       | Matplotlib                    |
+| Model Serialization | Joblib                        |
 
 ---
 
 ## Dataset
 
-**Inputs**
+### Input Parameters
 
 * Throat Length
 * Diverging Length
@@ -67,36 +52,81 @@ Performance was evaluated using:
 * Inlet Diameter
 * Outlet Diameter
 
-**Outputs**
+### Output Parameters
 
 * Mass Flow Rate
 * Inlet Pressure
 * Outlet Pressure
 * Maximum Velocity
 
-Total CFD Cases: **149**
+**Total CFD Simulation Cases:** **149**
+
+---
+
+## Machine Learning Models
+
+The following regression models were developed and evaluated:
+
+* Random Forest Regressor
+* Extra Trees Regressor
+* Gradient Boosting Regressor
+
+### Evaluation Metrics
+
+* R² Score
+* Mean Absolute Error (MAE)
+* Root Mean Squared Error (RMSE)
 
 ---
 
 ## Repository Structure
 
-```text
-Dataset/
-Models/
-Notebook/
-Results/
-Images/
-README.md
+```
+AI-Based-Venturi-Tube-Design-Using-Machine-Learning
+│
+├── Dataset/
+│   └── venturi.xlsx
+│
+├── Notebook/
+│   └── venturi.ipynb
+│
+├── Models/
+│   ├── Forward_Model.pkl
+│   ├── Inverse_Model.pkl
+│   ├── ExtraTrees_Model.pkl
+│   └── GradientBoosting_Model.pkl
+│
+├── Results/
+│   └── Model_Comparison.xlsx
+│
+├── Images/
+│
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## Future Improvements
+## Future Scope
 
-* Increase CFD dataset size
-* Improve prediction accuracy
-* Hyperparameter optimization
-* Integration with a desktop application
-* Extension to other internal flow components
+* Expand the CFD dataset to improve model generalization.
+* Optimize model performance using advanced hyperparameter tuning techniques.
+* Integrate optimization algorithms for automated Venturi tube design.
+* Extend the framework to other internal flow components.
 
 ---
+
+## Author
+
+**Harshita Yadav**
+
+B.Tech in Mechanical Engineering
+
+**Areas of Interest**
+
+* Computational Fluid Dynamics (CFD)
+* Machine Learning
+* ANSYS Fluent
+* Engineering Design
+* Data-Driven Engineering
